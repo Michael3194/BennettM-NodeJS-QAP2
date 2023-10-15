@@ -42,7 +42,7 @@ const server = http.createServer((request, response) => {
 
         console.log(`Route ${urlPath} not found`) // Log route not found message to the console
         response.writeHead(404, { 'Content-Type': 'text/plain' });
-        response,end('404 Not Found');
+        response.end('404 Not Found');
     }
 
 })
