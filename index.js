@@ -4,7 +4,7 @@ const fs = require('fs'); // Import filesystem module
 // Create an HTTP server
 const server = http.createServer((request, response) => {
 
-    const filePath = './views/' // Set the default file path
+    let filePath = './views/' // Set the default file path
     const urlPath = request.url; // Get the URL path
 
     // Map the URL paths to the file paths
