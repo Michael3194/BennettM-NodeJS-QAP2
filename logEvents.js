@@ -35,4 +35,4 @@ const logEvents = async (message) => {
 
 }
 
-module.exports = { myEmitter, logEvents }
+module.exports = logEvents; // Export the logEvents function

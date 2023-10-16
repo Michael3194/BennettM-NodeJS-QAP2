@@ -1,6 +1,17 @@
 const http = require('http'); // Import http module used to create http server
 const fs = require('fs'); // Import filesystem module
 
+const EventEmitter = require('events'); // Import the events module
+class MyEmitter extends EventEmitter { }
+const myEmitter = new MyEmitter();
+
+const logEvents = require('./logEvents.js'); // Import the logEvents function
+
+myEmitter.on('serverStarted', (message) => {
+    console.log(message)
+    logEvents('Server started')
+})
+
 // Create an HTTP server
 const server = http.createServer((request, response) => {
 
@@ -49,5 +60,6 @@ const server = http.createServer((request, response) => {
 
 // Start the server and listen on post 3000
 server.listen(3000, 'localhost', () => {
+    myEmitter.emit('serverStarted', 'Server started')
     console.log('Server is listening on port 3000') // Log a message to the console when the server starts
 })
