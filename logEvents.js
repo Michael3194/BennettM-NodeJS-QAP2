@@ -1,3 +1,15 @@
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+// NodeJS QAP 2
+
+// File: (logEvents.js)  is a module that allows us to log events to disk
+// Last Updated: 2023-10-17
+// Author: Michael Bennett
+
+/* ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
 const fs = require('fs'); // Import the filesystem module
 const fsPromises = require('fs').promises; // Import promises functionality for fs module
 const path = require('path') // Import the path module
